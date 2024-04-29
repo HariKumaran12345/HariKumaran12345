@@ -19,17 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Path to the video file
         var videoPath = "media/shotMap.mp4";
 
-        // Open the video in a new window with a specified width and height
-        var newWindow = window.open(videoPath, '_blank', 'width=600,height=400');
-        
         // Focus on the new window
         openVideo(videoPath);
     });
 });
 
 function openVideo(path) {
-    var width = 600;
-    var height = 400;
+    var width = 800;
+    var height = 600;
 
     var left = (window.screen.width - width) / 2;
     var top = (window.screen.height - height) / 2;
