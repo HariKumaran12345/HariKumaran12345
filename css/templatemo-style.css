@@ -255,11 +255,6 @@ h1,h2,h3,h4,h5
 /* end work */
 
 /* start about */
-#about h4
-    {
-        padding: 15px 0;
-		color: #D43F52;
-    }
 #about .progress
     {
         border-radius: 4px;
@@ -370,47 +365,8 @@ h1,h2,h3,h4,h5
         text-align: center;
         margin-right: 20px;
     }
-#contact .form-control
-    {
-        background: transparent;
-        border: 2px solid #999;
-        border-radius: 0;
-        box-shadow: none;
-        color: #ffffff;
-        margin-bottom: 20px;
-    }
-#contact input
-    {
-        height: 50px;
-    }
-#contact input[type="submit"]
-    {
-        background: #D43F52;
-        border: 2px solid transparent;
-        color: #ffffff;
-        font-weight: bold;
-        transition: all 0.4s ease-in-out;
-    }
-#contact input[type="submit"]:hover
-    {
-        background: #ffffff;
-        color: #D43F52;
-    }
-/* end contact */
 
-/* start footer */
-footer
-    {
-        border-top: 1px solid #090909;
-        text-align: center;
-        padding-top: 40px;
-        padding-bottom: 20px;
-    }
-footer hr
-    {
-        width: 100px;
-    }
-/* end footer */
+/* end contact */
 
 /* start social icon */
 .social-icon
