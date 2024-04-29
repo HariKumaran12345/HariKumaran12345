@@ -212,7 +212,7 @@ h1,h2,h3,h4,h5
     }
 /* end home */
 
-/* start work */
+/* start work 
 #work
     {
         background: #1a1a1a;
@@ -251,7 +251,7 @@ h1,h2,h3,h4,h5
         font-weight: 600;
         font-size: 20px;
         padding-bottom: 10px;
-    }
+    }*/
 /* end work */
 
 /* start about */
@@ -325,6 +325,18 @@ h1,h2,h3,h4,h5
         transform: scale(0.9);
     }
 /* end portfolio */
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.interest img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
 /* start contact */
 
