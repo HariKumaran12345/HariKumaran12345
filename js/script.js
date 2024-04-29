@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function openVideo(path) {
+    /*
     var width = 800;
     var height = 600;
 
@@ -33,5 +34,6 @@ function openVideo(path) {
     
     var newWindow = window.open(path, '_blank', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
     
-    newWindow.focus();
+    newWindow.focus();*/ //code for opening in same window
+    window.open(path,'_blank')
 }
