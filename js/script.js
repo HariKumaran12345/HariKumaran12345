@@ -7,17 +7,34 @@ document.addEventListener('DOMContentLoaded', function() {
         var videoPath = "media/Final Demo.mp4";
 
         // Open the video in a new window with a specified width and height
+        openVideo(videoPath);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click event listener to the portfolio-thumb div with id "photopill-project"
+    document.getElementById('shotmap-project').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        
+        // Path to the video file
+        var videoPath = "media/shotMap.mp4";
+
+        // Open the video in a new window with a specified width and height
         var newWindow = window.open(videoPath, '_blank', 'width=600,height=400');
         
         // Focus on the new window
-        newWindow.focus();
+        openVideo(videoPath);
     });
 });
 
 function openVideo(path) {
-    // Open the video in a new window with a specified width and height
-    var newWindow = window.open(path, '_blank', 'width=600,height=400');
+    var width = 600;
+    var height = 400;
+
+    var left = (window.screen.width - width) / 2;
+    var top = (window.screen.height - height) / 2;
     
-    // Focus on the new window
+    var newWindow = window.open(path, '_blank', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
+    
     newWindow.focus();
 }

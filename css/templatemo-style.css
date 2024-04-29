@@ -173,13 +173,11 @@ h1,h2,h3,h4,h5
 #home
 	{
         background: url('../images/tower-desktop.jpg');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         padding-top: 120px;
         padding-bottom: 140px;
         text-align: center;
-        background-position: top center, bottom center; /* Position the images */
-
 	}
 #home h1
     {
@@ -308,7 +306,7 @@ h1,h2,h3,h4,h5
     }
 #portfolio .portfolio-thumb .portfolio-overlay
     {
-        background: #D43F52;
+        background: #000000;
         top: 0;
         left: 0;
         right: 0;
