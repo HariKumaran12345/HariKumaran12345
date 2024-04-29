@@ -85,11 +85,14 @@
 								<div class="portfolio-overlay">
 									<h4>Khan Academy Redesign</h4>
 									<h5><a href="https://www.figma.com/file/EEQu5nNO09QkcxogPHAZMr/High-fi-prototype?type=design&node-id=0%3A1&mode=design&t=vjgsTK0R3wvCFnq4-1" target="_blank" style="color: white;">Figma Link</a></h5>
-									<h5 style="color: white; cursor: pointer;" onclick="toggleHighlights()">Highlights</h5>
-									<div id="highlightsPopup" style="display: none;">
-										<p>Sample text</p>
-									</div>									
+									<h5 style="color: white;" onclick="openModal('khanAcademyModal')">Highlights</h5>							
 								</div>
+						</div>
+					</div>
+					<div id="khanAcademyModal" class="modal">
+						<div class="modal-content">
+							<span class="close" onclick="closeModal('khanAcademyModal')">&times;</span>
+							<p>Describe your contributions here.</p>
 						</div>
 					</div>
 					<!--
@@ -256,13 +259,13 @@
 		<script src="js/custom.js"></script>
 
 		<script>
-			function toggleHighlights() {
-				var popup = document.getElementById("highlightsPopup");
-				if (popup.style.display === "none") {
-					popup.style.display = "block";
-				} else {
-					popup.style.display = "none";
-				}
+			function openModal(id) {
+				document.getElementById(modalId).style.display = 'block';
+			}
+
+			// Close the modal
+			function closeModal(id) {
+				document.getElementById(modalId).style.display = 'none';
 			}
 		</script>
 	</body>
