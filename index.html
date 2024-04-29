@@ -85,14 +85,19 @@
 								<div class="portfolio-overlay">
 									<h4>Khan Academy Redesign</h4>
 									<h5><a href="https://www.figma.com/file/EEQu5nNO09QkcxogPHAZMr/High-fi-prototype?type=design&node-id=0%3A1&mode=design&t=vjgsTK0R3wvCFnq4-1" target="_blank" style="color: white;">Figma Link</a></h5>
-									<h5 style="color: white;" onclick="openModal('khanAcademyModal')">Highlights</h5>							
+									<h5 style="color: white;" onclick="openModal('khanAcademyModal',event)">Highlights</h5>							
 								</div>
 						</div>
 					</div>
 					<div id="khanAcademyModal" class="modal">
 						<div class="modal-content">
 							<span class="close" onclick="closeModal('khanAcademyModal')">&times;</span>
-							<p>Describe your contributions here.</p>
+							<p>This was a group project in redesigning khan academy's design in line with teaching component skills. My specific 
+							contributions lay in the feature Daily Reviews, which incorporated several educational and design principles such as social
+							motivation, linked representations (via concept maps), the spatial contiguity principle, while also incorporating alternate approaches to solutions.
+							Snippets from my Daily Review Figma flow/frames are shown below.
+							</p>
+							<img src= "media/KhanAcademyFigmaHighlights.png" alt="Khan Academy Figma Highlights">
 						</div>
 					</div>
 					<!--
@@ -259,13 +264,21 @@
 		<script src="js/custom.js"></script>
 
 		<script>
-			function openModal(modalId) {
-				document.getElementById(modalId).style.display = 'block';
+			function openModal(modalId,event) {
+				var modal = document.getElementById(modalId);
+				modal.style.display = 'block';
+				modal.style.top = (event.clientY + window.pageYOffset) + 'px';
+				window.addEventListener('click', function(event) {
+					if (event.target !== modal && !modal.contains(event.target)) {
+						closeModal(modalId);
+					}
+				});
 			}
 
 			// Close the modal
 			function closeModal(modalId) {
 				document.getElementById(modalId).style.display = 'none';
+				window.removeEventListener('click', closeModal);
 			}
 		</script>
 	</body>
